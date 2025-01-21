@@ -169,7 +169,7 @@ html {
   left: 0px;
   position: relative;
   width: 420px;
-  height: 515px;
+  height: 540px;
 }
 
 .animate {
@@ -279,7 +279,18 @@ html {
   letter-spacing: 1px;
   text-align: center;
 }
-
+.section-calendar .countdown {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #b10000;
+}
+.section-calendar .countdown .coming {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
 .section-calendar .text-date {
   border-color: rgba(229, 231, 235, 1);
   border-style: solid;

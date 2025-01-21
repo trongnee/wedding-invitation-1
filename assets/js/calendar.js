@@ -1,10 +1,49 @@
 (() => {
-  const dateTime = '2025-01-30 11:30:00',
+  const dateTime = '2025-02-01 11:30:00',
     daysTag = document.querySelector(".days"),
     currentDate = document.querySelector(".current-date");
   let date = new Date(dateTime),
     currYear = date.getFullYear(),
     currMonth = date.getMonth();
+
+  const countDownElement = document.querySelector('.section-calendar .diff-time');
+  let interval = setInterval(countDown, 1000);
+  function countDown() {
+    const now = new Date();
+    if (date < now) {
+      document.querySelector('.section-calendar .countdown').innerHTML = '';
+      clearInterval(interval);
+    };
+    const distance = Math.abs(date - now);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    const startTo = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const startFrom = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const diffTime = Math.abs(startTo - startFrom);
+    
+    const nextDays = [
+      'HÔM NAY',
+      'NGÀY MAI',
+      'NGÀY KIA',
+    ];
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    if (nextDays[diffDays]) {
+      clearInterval(interval);
+      countDownElement.classList.add('coming');
+      countDownElement.innerHTML = nextDays[diffDays];
+      return;
+    };
+    let countdown = 'Còn: ';
+    if (days > 0) {
+      countdown += `${days} ngày `;
+    }
+    countdown += `${hours} giờ ${minutes} phút ${seconds} giây.`;
+    countDownElement.innerHTML = countdown;
+  }
+  countDown();
   const months = [
     "Tháng 1",
     "Tháng 2",
@@ -67,8 +106,8 @@
     for (let i = 1; i <= lastDateofMonth; i++) {
       let isToday =
         i === date.getDate() &&
-          currMonth === new Date().getMonth() &&
-          currYear === new Date().getFullYear()
+          currMonth === date.getMonth() &&
+          currYear === date.getFullYear()
           ? "active"
           : "";
       liTag += `<li class="${isToday}">${i}</li>`;
