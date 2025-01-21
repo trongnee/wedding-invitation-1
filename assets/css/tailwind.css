@@ -1284,7 +1284,7 @@ html {
 
 .slide-left {
   width: 420px;
-  height: 800px;
+  height: 100vh;
   top: 0px;
   left: -420px;
   background: center center / cover no-repeat scroll content-box border-box url(../images/open-left.png);
@@ -1292,7 +1292,7 @@ html {
 
 .slide-right {
   width: 420px;
-  height: 800px;
+  height: 100vh;
   top: 0px;
   right: -420px;
   background: center center / cover no-repeat scroll content-box border-box url(../images/open-right.png);
@@ -1304,6 +1304,7 @@ html {
   position: relative;
   width: 420px;
   height: 800px;
+  z-index: 2;
 }
 
 .text-block {
@@ -1344,7 +1345,7 @@ html {
   background: center center / cover no-repeat scroll content-box border-box url(../images/gu.png);
 }
 
-.time {
+.section-intro .time {
   -webkit-text-stroke: 0px rgba(0, 0, 0, 1.000);
   border-color: rgba(229, 231, 235, 1);
   border-style: solid;
@@ -1354,7 +1355,7 @@ html {
   text-align: center;
 }
 
-.date {
+.section-intro .fulldate {
   -webkit-text-stroke: 0px rgba(0, 0, 0, 1.000);
   border-color: rgba(229, 231, 235, 1);
   border-style: solid;

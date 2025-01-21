@@ -1,4 +1,15 @@
+// Khóa cuộn trang trong 2 giây đầu
+document.body.style.overflow = 'hidden';
+setTimeout(function () {
+  document.body.style.overflow = 'auto';
+}, 2000);
+
+setTimeout(function () {
+  window.scrollTo(0, 0); // Cuộn lên đầu trang
+}, 100);
+
 window.addEventListener('load', function () {
+  //CHẠY ANIMATION KHI ĐƯỢC CUỘN TỚI
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
@@ -12,4 +23,5 @@ window.addEventListener('load', function () {
   );
   const items = document.querySelectorAll('[animate]');
   items.forEach(item => observer.observe(item));
+  //----
 });

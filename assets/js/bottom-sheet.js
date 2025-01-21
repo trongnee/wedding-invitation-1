@@ -69,7 +69,7 @@
 
   const addDragEvents = (target) => {
     target.addEventListener("mousedown", dragStart);
-    target.addEventListener("touchstart", dragStart);
+    target.addEventListener("touchstart", dragStart, { passive: true });
   };
 
   const addMoveEvents = (target) => {

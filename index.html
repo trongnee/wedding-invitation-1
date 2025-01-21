@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./assets/images/joy.png">
+
   <title>Anh Tú - Diệu Nhi</title>
   <link rel="stylesheet" href="./assets/css/css.css">
   <link rel="stylesheet" href="./assets/css/tailwind.css">
@@ -11,9 +13,14 @@
   <link rel="stylesheet" href="./assets/css/calendar.css">
   <link rel="stylesheet" href="./assets/css/bottom-sheet.css">
 
+  <!-- Tải trước một số ảnh -->
+  <link rel="preload" as="image" href="./assets/images/open-left.png">
+  <link rel="preload" as="image" href="./assets/images/open-right.png">
+  <!-- END -->
   <script>
-    !function(e,t,i){var a,n=e.innerWidth;if(e[i]=(true||n<768)?"mobile":"desktop","desktop"==e[i])a="width=" + 960 + ", user-scalable=no, initial-scale=1.0";else{var o=1;w=420;w!=n&&(o=n/w),a="width=" + w + ", user-scalable=no, initial-scale=" + o + ", minimum-scale=" + o + ", maximum-scale=" + o}var l=t.createElement("meta");l.name="viewport",l.setAttribute("content",a),t.head.appendChild(l)}(window,document,"DISPLAY");  
+    !function (e, t, i) { var a, n = e.innerWidth; if (e[i] = (true || n < 768) ? "mobile" : "desktop", "desktop" == e[i]) a = "width=" + 960 + ", user-scalable=no, initial-scale=1.0"; else { var o = 1; w = 420; w != n && (o = n / w), a = "width=" + w + ", user-scalable=no, initial-scale=" + o + ", minimum-scale=" + o + ", maximum-scale=" + o } var l = t.createElement("meta"); l.name = "viewport", l.setAttribute("content", a), t.head.appendChild(l) }(window, document, "DISPLAY");  
   </script>
+  <script src="./assets/js/lunar.js" defer></script>
   <script src="./assets/js/calendar.js" defer></script>
 </head>
 
@@ -56,11 +63,11 @@
             </div>
 
             <div class="absolute top-[222px] left-[83px] w-[254px] h-[22.5px] animate">
-              <h2 class="time w-full animate-[fadeInUp_3s]">THỨ 7 - 11h00</h2>
+              <h2 class="time w-full animate-[fadeInUp_3s]"></h2>
             </div>
 
             <div class="absolute top-[244.5px] left-[83px] w-[254px] h-[33px] animate">
-              <h2 class="date w-full animate-[fadeInUp_3s]">15.12.2024</h2>
+              <h2 class="fulldate w-full animate-[fadeInUp_3s]">15.12.2024</h2>
             </div>
 
             <div class="absolute top-[301px] left-[58px] w-[304px] h-[456px] animate">
@@ -204,10 +211,10 @@
         <p class="text-calandar" animate="fadeIn_3s">THAM DỰ TIỆC MỪNG LỄ THÀNH HÔN<br>Vào Lúc<br></p>
       </div>
       <div class="absolute top-[408.5px] left-[-9.85px] w-[185px] h-[21px] animate">
-        <p class="text-date tracking-[1px]" animate="fadeInLeft_2s">11 giờ 30</p>
+        <p class="text-date tracking-[1px] time" animate="fadeInLeft_2s"></p>
       </div>
       <div class="absolute top-[408.5px] left-[244.86px] w-[185px] h-[21px] animate">
-        <p class="text-date tracking-[1px]" animate="fadeInRight_2s">Năm 2024</p>
+        <p class="text-date tracking-[1px] year" animate="fadeInRight_2s"></p>
       </div>
       <div class="absolute top-[408.5px] left-[95px] w-[65px] h-auto animate">
         <div class="rotate-90 h-full w-full">
@@ -224,16 +231,16 @@
         </div>
       </div>
       <div class="absolute top-[376px] left-[114.64px] w-[185px] h-[21px] animate">
-        <p class="text-date tracking-[3px]" animate="fadeInDown_3s">Thứ 7</p>
+        <p class="text-date tracking-[3px] day" animate="fadeInDown_3s"></p>
       </div>
       <div class="absolute top-[441px] left-[114.64px] w-[185px] h-[21px] animate">
-        <p class="text-date tracking-[3px]" animate="fadeInDown_3s">Tháng 12</p>
+        <p class="text-date tracking-[3px] month" animate="fadeInDown_3s"></p>
       </div>
       <div class="absolute top-[390px] left-[114.64px] w-[185px] h-[52.5px] animate">
-        <p class="text-day" animate="zoomIn_3s">15</p>
+        <p class="text-day date" animate="zoomIn_3s"></p>
       </div>
       <div class="absolute top-[482.5px] left-[-1px] w-[422px] h-[21px] animate">
-        <p class="lunar-calendar" animate="fadeIn_2s">(Tức Ngày 16 Tháng 10 Năm Giáp Thìn)</p>
+        <p class="lunar-calendar" animate="fadeIn_2s"></p>
       </div>
     </section>
     <section class="section-address">
