@@ -1384,12 +1384,13 @@ html {
   overflow: hidden;
 }
 
-.image-1 {
-  width: 346.0778075801749px;
-  height: 465.45142857142855px;
+.section-intro .image-1 {
+  width: 346px;
+  height: 465px;
   top: -11.291428571428572px;
   left: -25.188571428571432px;
-  background: center center / cover no-repeat scroll content-box border-box url(https://content.pancake.vn/1/s760x1012/fwebp/eb/5b/c4/50/98fec609d98e091e56d5f5c44bbb921a8bdcc671f0315c18a84312e7.jfif);
+  background: center center / cover no-repeat scroll content-box border-box url(../wedding/1.jpg);
+  background-position: top;
 }
 
 #lantern {
@@ -1480,12 +1481,12 @@ html {
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 1);
 }
 
-.image-2 {
-  width: 404.64220183486236px;
-  height: 544px;
-  top: -59px;
-  left: -28.76350662589195px;
-  background: center center / cover no-repeat scroll content-box border-box url(https://content.pancake.vn/1/s836x1116/fwebp/e2/8c/c5/37/905dccbcd5bc1c1b602c10c95acb9986765f735e075bff1097e7f457.jfif);
+.section-content .image-2 {
+  width: 354px;
+  height: 269px;
+  top: 0;
+  left: -10px;
+  background: center center / cover no-repeat scroll content-box border-box url(../wedding/5.jpg);
 }
 
 .section-calendar .divider {
