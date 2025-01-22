@@ -632,16 +632,16 @@
   animation: pulse 4s infinite;
 }
 
-.animate-\[slideInLeft_8s\] {
-  animation: slideInLeft 8s;
-}
-
-.animate-\[slideInRight_8s\] {
-  animation: slideInRight 8s;
-}
-
 .animate-\[slideInUp_5s\] {
   animation: slideInUp 5s;
+}
+
+.animate-\[slideOutLeft_8s\] {
+  animation: slideOutLeft 8s;
+}
+
+.animate-\[slideOutRight_8s\] {
+  animation: slideOutRight 8s;
 }
 
 .animate-\[zoomIn_3s\] {
@@ -1295,7 +1295,7 @@ html {
   width: 420px;
   height: 100vh;
   top: 0px;
-  left: -420px;
+  left: 1px;
   background: center center / cover no-repeat scroll content-box border-box url(../images/open-left.png);
 }
 
@@ -1303,8 +1303,12 @@ html {
   width: 420px;
   height: 100vh;
   top: 0px;
-  right: -420px;
   background: center center / cover no-repeat scroll content-box border-box url(../images/open-right.png);
+}
+
+.slide-right.slided, .slide-left.slided {
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0);
 }
 
 .section-intro {
@@ -1487,6 +1491,10 @@ html {
   top: 0;
   left: -10px;
   background: center center / cover no-repeat scroll content-box border-box url(../wedding/5.jpg);
+}
+
+.section-intro [class*="animate-"] {
+  animation-delay: 1.25s;
 }
 
 .section-calendar .divider {

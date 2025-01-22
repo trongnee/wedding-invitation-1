@@ -51,7 +51,7 @@ html {
   width: 420px;
   height: 100vh;
   top: 0px;
-  left: -420px;
+  left: 1px;
   background: center center / cover no-repeat scroll content-box border-box url(../images/open-left.png);
 }
 
@@ -59,10 +59,13 @@ html {
   width: 420px;
   height: 100vh;
   top: 0px;
-  right: -420px;
   background: center center / cover no-repeat scroll content-box border-box url(../images/open-right.png);
 }
 
+.slide-right.slided, .slide-left.slided {
+  visibility: hidden;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);}
 .section-intro {
   top: 0px;
   left: 0px;
@@ -245,6 +248,10 @@ html {
   background: center center / cover no-repeat scroll content-box border-box url(../wedding/5.jpg);
 }
 
+.section-intro [class*="animate-"] {
+  animation-delay: 1.25s;
+}
+
 .section-calendar .divider {
   width: 166px;
   height: 166px;
@@ -280,6 +287,7 @@ html {
   letter-spacing: 1px;
   text-align: center;
 }
+
 .section-calendar .countdown {
   text-align: center;
   font-weight: 700;
@@ -287,11 +295,13 @@ html {
   letter-spacing: 2px;
   color: #b10000;
 }
+
 .section-calendar .countdown .coming {
   font-size: 16px;
   font-weight: 800;
   letter-spacing: 3px;
 }
+
 .section-calendar .text-date {
   border-color: rgba(229, 231, 235, 1);
   border-style: solid;

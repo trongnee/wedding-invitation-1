@@ -1,12 +1,16 @@
-// Khóa cuộn trang trong 2 giây đầu
 document.body.style.overflow = 'hidden';
 setTimeout(function () {
   document.body.style.overflow = 'auto';
 }, 2000);
+setTimeout(function () {
+  document.querySelectorAll('.slide-right,.slide-left').forEach(el => {
+    el.classList.add('slided');  
+  })
+}, 8000);
 
-// setTimeout(function () {
-//   window.scrollTo(0, 0); // Cuộn lên đầu trang
-// }, 350);
+setTimeout(function () {
+  window.scrollTo(0, 0); // Cuộn lên đầu trang
+}, 350);
 
 window.addEventListener('load', function () {
   //CHẠY ANIMATION KHI ĐƯỢC CUỘN TỚI
